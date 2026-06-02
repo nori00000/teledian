@@ -1,5 +1,10 @@
 # Telegram Sidebar for Obsidian
 
+> **한눈에 / At a glance**  
+> Forked Obsidian desktop plugin embedding Telegram Web in a sidebar.  
+> 자세한 한영 프로젝트 설명, 검색 키워드, 저작권 범위: [PROJECT.md](./PROJECT.md) · [NOTICE.md](./NOTICE.md)
+
+
 Embed **Telegram Web** directly in your Obsidian sidebar. Chat with bots, contacts, groups, and channels without leaving your vault.
 
 ![Desktop Only](https://img.shields.io/badge/platform-desktop%20only-blue)
