@@ -87,17 +87,14 @@ export default class TelegramSidebarPlugin extends Plugin {
 					return;
 				}
 
-				const markdownLeaf = this.app.workspace.getLeavesOfType("markdown");
-				const activeMarkdownLeaf = markdownLeaf.find(
-					(leaf) => leaf.view instanceof MarkdownView
-				);
+				const activeMarkdownView = this.app.workspace.getActiveViewOfType(MarkdownView);
 
-				if (!activeMarkdownLeaf) {
+				if (!activeMarkdownView) {
 					new Notice("No active note to save to");
 					return;
 				}
 
-				const editor = (activeMarkdownLeaf.view as MarkdownView).editor;
+				const editor = activeMarkdownView.editor;
 				const cursor = editor.getCursor();
 				editor.replaceRange(`\n${selectedText}\n`, cursor);
 				new Notice("Telegram text saved to note");
